@@ -557,6 +557,7 @@ nav[canvas]
 	z-index: 10
 	.row
 		align-items: center
+		background-color: #ffffff
 .header__logo
 	display: inline-block
 	margin-left: 15px
@@ -569,29 +570,18 @@ nav[canvas]
 .header__nav
 	display: inline-block
 	position: relative
-	margin-left: auto
-	margin-right: auto
 	ul
 		li
 			list-style: none
 			display: inline-block
 			a
-				margin-right: 15px
-				color: #fff
+				margin-right: 35px
+				color: $main_txt_color
 				fz(16)
 				text-decoration: none
 				transition: .5s
 .header__modal
 	display: inline-block
-	&.last
-		a
-			&:after
-				css-triangle(#fff,up,10px)
-				top: calc(50% - 5px)
-				right: -20px
-				transition: 0.5s
-			&:hover:after
-				transform: rotate(180deg)
 	a
 		margin-left: 15px
 		padding: 10px 15px
