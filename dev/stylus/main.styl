@@ -88,7 +88,7 @@ body
 //-moz-osx-font-smoothing: grayscale
 
 h1
-	font($main_color, 28, $font_main_regular, 1.2)
+	font($main_color, 32, $font_main_regular, 1.2)
 p,ul
 	padding: 0
 	margin: 0
@@ -550,17 +550,62 @@ nav[canvas]
 // Header
 .header
 	width: 100%
-	padding-top: 30px
-	padding-bottom: 30px
 	background-color: transparent
 	position: absolute
+	top: 20px
 	z-index: 10
 	.row
 		align-items: center
 		background-color: #ffffff
+	&__social-link-wrap
+		margin-right: 30px
+		display: flex
+	&__social-link
+		width: 30px
+		height: 30px
+		margin-right: 10px
+		&:last-of-type
+			margin-right: 0
+		a
+			width: 100%
+			height: 100%
+			display: flex
+			align-items: center
+			justify-content: center
+			background-color: $main_color
+			border-radius: 50%
+			text-decoration: none
+			color: inherit
+			transition: 0.5s
+			&:hover
+				text-decoration: none
+				background-color: $main_txt_color
+			&:active
+				text-decoration: none
+				background-color: $main_txt_color
+			&:focus
+				text-decoration: none
+				background-color: $main_txt_color
+
+		i
+			color: #fff
+	&__phone
+		a
+			color: $main_color
+			text-decoration: none
+			&:hover
+				text-decoration: underline
+			&:active
+				text-decoration: underline
+			&:focus
+				text-decoration: underline
+		span
+			color: $main_txt_color
+
 .header__logo
 	display: inline-block
 	margin-left: 15px
+	margin-right: 60px
 	a
 		color: #fff
 		fz(34)
@@ -570,31 +615,61 @@ nav[canvas]
 .header__nav
 	display: inline-block
 	position: relative
+	margin-right: 30px
 	ul
 		li
 			list-style: none
 			display: inline-block
+			&:last-of-type a
+				margin-right: 0
 			a
-				margin-right: 35px
+				margin-right: 80px
 				color: $main_txt_color
 				fz(16)
 				text-decoration: none
 				transition: .5s
+				&:hover
+					text-decoration: none
+					color: $main_color
+				&:active
+					text-decoration: none
+					color: $main_color
+				&:focus
+					text-decoration: none
+					color: $main_color
+
 .header__modal
 	display: inline-block
+	margin-left: auto
+	margin-right: 15px
 	a
-		margin-left: 15px
-		padding: 10px 15px
-		font(#fff, 17, $font_main_regular)
-		border: 2px solid #FFF
-		border-radius: 10px
+		width: 170px
+		height: 40px
+		text-align: center
+		display: block
+		background-color: transparent
+		font($main_txt_color, 14, $font_main_regular)
+		line-height: 40px
 		text-decoration: none
 		transition: .5s
 		position: relative
 		&:hover
-			border: 2px solid transparent
-			background-color: #ff9600
+			background-color: #f8a80f
 			color: #fff
+		&:hover i
+			color: #fff
+		&:active
+			text-decoration: none
+			color: #fff
+		&:focus
+			text-decoration: none
+			color: #fff
+		i
+			margin-right: 6px
+			font-size: 14px
+			color: $main_txt_color
+			transition: 0.5s
+
 
 // Пример checkbox
 label.check, label.radio

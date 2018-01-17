@@ -1,6 +1,6 @@
 +b.HEADER(class="header")
 	.container
-		.row
+		.row.sticky
 			+e.logo
 				a(href="/" class="logo" title="Логотип")
 					img(src="img/logo.png")
@@ -9,6 +9,19 @@
 					each link,title in nav.navPages
 						li
 							a(href= link)= title
-
+			+e.social-link-wrap
+				+e.social-link
+					a(href="#")
+						i.fa.fa-facebook
+				+e.social-link
+					a(href="#")
+						i.fa.fa-instagram
+			+e.phone
+				a(href="tel:+380991111111")
+					span +38
+					|
+					| (099) 111-11-11
 			+e.modal
-				a(data-effect="mfp-zoom-in" data-info="Обратный звонок" href="#popup" class="open-popup-link" title='Вызов стандартного модального окна') Обратный звонок
+				a(data-effect="mfp-zoom-in" data-info="Обратный звонок" href="#popup" class="open-popup-link" title='Вызов модального окна')
+					i.fa.fa-mail-forward
+					| Обратный звонок

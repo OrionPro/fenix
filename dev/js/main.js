@@ -55,14 +55,25 @@ function customScrollbar() {
 }
 
 $(document).ready(function () {
+
 	svg4everybody({});
 
 	$("body").addClass("index ink-transition");
 
-	$(".sticky").sticky({
-		topSpacing: 0,
-		widthFromWrapper: false
-	});
+	// чтобы отключить sticky в нужном месте используем этот код ,задержка нужна для того, чтобы вся страница построилась ,к примеру если есть слайдеры
+	var bottomSpacingS;
+	setTimeout( function () {
+		bottomSpacingS = $(document).outerHeight() - ($('.top-section').outerHeight()+ $('.top-section').offset().top);
+	}, 500);
+
+	setTimeout( function () {
+		$(".sticky").sticky({
+			topSpacing: 0,
+			//bottomSpacing: bottomSpacingS,
+			widthFromWrapper: false
+		});
+	}, 600);
+
 	// пример анимации через библиотечку animat (но лучше анимировать через GSAP)
 	//$('.our-advantages h2').animated("fadeInUp");
 

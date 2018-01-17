@@ -1,7 +1,7 @@
 // Секция top-section
 .top-section
 	text-align: center
-	min-height: 660px
+	min-height: 760px
 	height: 100vh
 	background: url(../img/header_bg.jpg) no-repeat
 	background-size: cover
@@ -12,7 +12,6 @@
 			height: 100%
 			min-height: 100%
 			flex-direction: column
-			align-items: center
 	&__slider-control
 		width: 70px
 		height: 70px
@@ -20,17 +19,26 @@
 		opacity: 0.9
 		background-color: white
 		border-radius: 35px
-.top-section__title
-	margin-top: 115px
-	display: flex
-	flex-direction: column
-	align-items: center
-	margin-bottom: auto
-	p
-		fz(30)
-		color: #fff
-
-
+	&__title
+		width: 670px
+		position: relative
+		margin-top: 233px
+		padding: 55px 60px 60px 60px
+		margin-bottom: auto
+		background-color: #ffffff
+		text-align: left
+		p
+			fz(28)
+			color: $main_txt_color
+	&__links-wrap
+		position: absolute
+		top: 50%
+		right: -375px
+		transform translate(-50%,0)
+		a
+			margin-right: 30px
+			&:last-of-type
+				margin-right: 0
 // Секция our_advantages
 .our-advantages
 	min-height: 630px
