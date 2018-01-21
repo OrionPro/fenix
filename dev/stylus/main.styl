@@ -68,7 +68,7 @@ body
 	min-width: 320px
 	position: relative
 	line-height: 1.2
-	font-family: $font_main_regular
+	font-family: $font_ProximaNovaRegular
 	overflow-x: hidden
 	color: $main_txt_color
 	-webkit-tap-highlight-color: transparent
@@ -88,7 +88,10 @@ body
 //-moz-osx-font-smoothing: grayscale
 
 h1
-	font($main_color, 32, $font_main_regular, 1.2)
+	font($main_color, 32, $font_ProximaNovaSemibold, 1.2)
+h2
+	font($main_txt_color, 32, $font_ProximaNovaSemibold, 1.2)
+	text-transform: uppercase
 p,ul
 	padding: 0
 	margin: 0
@@ -553,7 +556,7 @@ nav[canvas]
 	background-color: transparent
 	position: absolute
 	top: 20px
-	z-index: 10
+	z-index: 11
 	.row
 		align-items: center
 		background-color: #ffffff
@@ -608,8 +611,6 @@ nav[canvas]
 	margin-right: 60px
 	a
 		color: #fff
-		fz(34)
-		font-family: $font_main_regular
 		&:hover
 			text-decoration: none
 .header__nav
@@ -648,7 +649,7 @@ nav[canvas]
 		text-align: center
 		display: block
 		background-color: transparent
-		font($main_txt_color, 14, $font_main_regular)
+		font($main_txt_color, 14, $font_ProximaNovaRegular)
 		line-height: 40px
 		text-decoration: none
 		transition: .5s

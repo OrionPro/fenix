@@ -3,19 +3,20 @@ function tabs(obj) {
 	const buttons = document.querySelectorAll(obj.btn);
 	const bodyTabs = document.querySelectorAll(obj.tabsBody);
 
-	let func = function(){
+	let func = function () {
 		"use strict";
-		for( let i = buttons.length; i--; ){
+		for (let i = buttons.length; i--;) {
 			buttons[i].classList.remove(obj.classBtn);
 			bodyTabs[i].classList.remove(obj.classBody);
 		}
 		this.classList.add(obj.classBtn);
-		let item = [].indexOf.call(buttons,this);
+		let item = [].indexOf.call(buttons, this);
 		bodyTabs[item].classList.add(obj.classBody)
 	};
 
-	[].forEach.call(buttons,item => item.addEventListener('click',func));
+	[].forEach.call(buttons, item => item.addEventListener('click', func));
 }
+
 // Определения браузера
 function get_name_browser() {
 	// получаем данные userAgent
@@ -34,11 +35,13 @@ function get_name_browser() {
 	// для популярных браузеров
 	return 'Не определен';
 }
+
 // решаем вопрос с min-height 100% у safari до версии 11
 function heightItemSafari(obj) {
-	let heightItem =  $(obj.itemHeight).height();
+	let heightItem = $(obj.itemHeight).height();
 	$(obj.item).css("min-height", heightItem + obj.itemHeightBorder);
 }
+
 // Создаём цикл для инициализации mCustomScrollbar в нужных select
 function customScrollbar() {
 	$(document).find('.select .drop').each(function () {
@@ -62,11 +65,11 @@ $(document).ready(function () {
 
 	// чтобы отключить sticky в нужном месте используем этот код ,задержка нужна для того, чтобы вся страница построилась ,к примеру если есть слайдеры
 	var bottomSpacingS;
-	setTimeout( function () {
-		bottomSpacingS = $(document).outerHeight() - ($('.top-section').outerHeight()+ $('.top-section').offset().top);
+	setTimeout(function () {
+		bottomSpacingS = $(document).outerHeight() - ($('.top-section').outerHeight() + $('.top-section').offset().top);
 	}, 500);
 
-	setTimeout( function () {
+	setTimeout(function () {
 		$(".sticky").sticky({
 			topSpacing: 0,
 			//bottomSpacing: bottomSpacingS,
@@ -87,30 +90,76 @@ $(document).ready(function () {
 			theme: 'tooltipster-light'
 		});
 	}
-	//  Активация слайдера
-	$(".owl-carousel").owlCarousel({
-		loop: true,
-		items: 1,
-		dots: true,
-		nav: true
-	});
+
 	// инициализация swiper слайдера
-	const swiper = new Swiper('.swiper-container', {
-		pagination: {
-			el: '.swiper-pagination',
-			clickable: true,
+	const swiper = new Swiper('.top-section', {
+		slidesPerView: 1,
+		navigation: {
+			nextEl: '.top-section__slider-navigation .swiper-button-next',
+			prevEl: '.top-section__slider-navigation .swiper-button-prev',
+
 		},
 	});
-	// инициализация select2
-	$(".select2").select2({
-		//minimumResultsForSearch: -1, // выключам поле ввода поиска
-		tags: false,
-		width: '100%'
+	const swiperWeDo = new Swiper('.we-do__slider', {
+		slidesPerView: 5,
+		loop: true,
+		navigation: {
+			nextEl: '.we-do .button-prev',
+			prevEl: '.we-do .button-next',
+
+		},
+		// Responsive breakpoints
+		breakpoints: {
+			// when window width is <= 320px
+			575: {
+				slidesPerView: 1
+			},
+			// when window width is <= 480px
+			767: {
+				slidesPerView: 2,
+				spaceBetween: 10
+			},
+			// when window width is <= 640px
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 10
+			},
+			// when window width is <= 1200px
+			1200: {
+				slidesPerView: 3
+			}
+		}
 	});
-	$(".select2-tags").select2({
-		tags: true,
-		placeholder: "Выберите один или несколько тегов",
-		width: '100%'
+	const swiperPartners = new Swiper('.partners__slider', {
+		slidesPerView: 3,
+		spaceBetween: 30,
+		loop: true,
+		navigation: {
+			nextEl: '.partners .button-prev',
+			prevEl: '.partners .button-next',
+
+		},
+		// Responsive breakpoints
+		breakpoints: {
+			// when window width is <= 320px
+			575: {
+				slidesPerView: 1
+			},
+			// when window width is <= 480px
+			767: {
+				slidesPerView: 2,
+				spaceBetween: 10
+			},
+			// when window width is <= 640px
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 10
+			},
+			// when window width is <= 1200px
+			1200: {
+				slidesPerView: 3
+			}
+		}
 	});
 	// Инициализация маски в input
 	$(".mask").mask("+38(999) 999-99-99");
@@ -118,16 +167,16 @@ $(document).ready(function () {
 	customScrollbar();
 	// вызов tabs
 	tabs({
-		btn:'.tabs-items-wrap > .tabs-item',
-		tabsBody:'.tabs-wrap',
-		classBody:'active',
+		btn: '.tabs-items-wrap > .tabs-item',
+		tabsBody: '.tabs-wrap',
+		classBody: 'active',
 		classBtn: 'active'
 	});
 	tabs({
-		btn:'.tabs-items-wrap-inner > .tabs-item',
-		tabsBody:'.tabs-wrap-inner',
+		btn: '.tabs-items-wrap-inner > .tabs-item',
+		tabsBody: '.tabs-wrap-inner',
 		classBody: 'active',
-		classBtn:'active'
+		classBtn: 'active'
 	});
 	if (get_name_browser() == "Trident" || get_name_browser() == "Internet Explorer" || get_name_browser() == "Firefox") {
 		// $(".from_what_is_seo .from_what_is_seo_bot_decor svg").css("bottom", "-217px");
@@ -174,31 +223,14 @@ $(document).ready(function () {
 	//     }, 500);
 	//     return false;
 	// });
-
-	//  Активация слайдера
-	// $(".owl-carousel").owlCarousel({
-	//     loop: true,
-	//     items: 1,
-	//     dots: true
-	// });
-
-	// Кастомные кнопки управления слайдером
-	// var owl = $('.owl-carousel');
-	// owl.owlCarousel();
-	// // Go to the next item
-	// $('.customNextBtn').click(function() {
-	//     owl.trigger('next.owl.carousel', [700]);
-	// });
-	// // Go to the previous item
-	// $('.customPrevBtn').click(function() {
-	//     // With optional speed parameter
-	//     // Parameters has to be in square bracket '[]'
-	//     owl.trigger('prev.owl.carousel', [700]);
-	// });
 });
 
 $(window).resize(function () {
-
+	$(".sticky").sticky({
+		topSpacing: 0,
+		//bottomSpacing: bottomSpacingS,
+		widthFromWrapper: false
+	});
 });
 
 $(window).scroll(function () {

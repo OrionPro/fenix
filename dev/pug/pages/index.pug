@@ -6,129 +6,225 @@ block variables
 
 block main
 	+b.SECTION.top-section
-		.container
-			.row
-				+e.title
-					h1
-						| ПРОИЗВОДСТВО КОРПУСНОЙ МЕБЕЛИ НА ЗАКАЗ
-					p
-						| Для жилых, гостиничных и офисных
-						| помещений по Вашим размерам и
-						| пожеланиям
-					+e.links-wrap
-						a(href="#" class="main_btn") СМОТРЕТЬ ФОТО
-							i.fa.fa-long-arrow-right
-						a(href="#" class="main_btn") БЕСПЛАТНЫЙ ЗАМЕР
-							i.fa.fa-long-arrow-right
-				+e.slider-control
-					| -
+		.swiper-wrapper
+			.swiper-slide
+				.container
+					+e.title
+						h1
+							| ПРОИЗВОДСТВО КОРПУСНОЙ МЕБЕЛИ НА ЗАКАЗ
+						p
+							| Для жилых, гостиничных и офисных
+							| помещений по Вашим размерам и
+							| пожеланиям
+						+e.links-wrap
+							a(href="#" class="main_btn") СМОТРЕТЬ ФОТО
+								i.fa.fa-long-arrow-right
+							a(href="#" class="main_btn") БЕСПЛАТНЫЙ ЗАМЕР
+								i.fa.fa-long-arrow-right
+			.swiper-slide
+				.container
+					.row
+						+e.title
+							h1
+								| ПРОИЗВОДСТВО ЧЕГО ТО ТАМ ЕЩЁ
+							p
+								| Для жилых, гостиничных и офисных
+								| помещений по Вашим размерам и
+								| пожеланиям
+							+e.links-wrap
+								a(href="#" class="main_btn") СМОТРЕТЬ ФОТО
+									i.fa.fa-long-arrow-right
+								a(href="#" class="main_btn") БЕСПЛАТНЫЙ ЗАМЕР
+									i.fa.fa-long-arrow-right
+		+e.slider-control
+			+e.slider-navigation
+				.swiper-button-prev
+					i.fa.fa-angle-left
+				.swiper-button-next
+					i.fa.fa-angle-right
 	// Секция  our_advantages
 	+b.SECTION#our_advantages.our-advantages
 		.container
-			+e.title
-				h2 Наши преимущества
-				img(src="img/garant.svg")
-			// пример миксинов
-			+icon('vk')
-			+list('my-list', 'Номер 1', 'Номер 2', 'Номер 3', 'Номер 4')
 			.row
-				+e.item.col-lg-4.col-md-6
-					.our-advantages__img
-						i.fa.fa-users
-					h3 Заголовок
-					p Индивидуальный подход к каждому клиенту
-				+e.item.col-lg-4.col-md-6
-					+e.img
-						i.fa.fa-diamond
-					h3 Заголовок
-					p Неповторимость и практичность каждого проекта мебели
-				+e.item.col-lg-4.col-md-6
-					+e.img
-						i.fa.fa-list-ol
-					h3 Заголовок
-					p Многообразие материалов и стилевых решений
-				+e.item.col-lg-4.col-md-6
-					+e.img
-						i.fa.fa-pencil
-					h3 Заголовок
-					p Для вас бесплатно: замер, дизайн-проект, доставка и монтаж
-				+e.item.col-lg-4.col-md-6
-					+e.img
-						i.fa.fa-credit-card-alt
-					h3 Заголовок
-					p Возможность оформления мебели в кредит
-				+e.item.col-lg-4.col-md-6
-					+e.img
-						i.fa.fa-wrench
-					h3 Заголовок
-					p Изготовление мебели только из высококачественных материалов
-	// Секция main_content
-	+b.SECTION.main-content
+				.col-lg-4.col-md-6
+					+e.item
+						+e.img
+							img(src="img/our-advantages__img.png")
+						p Более 10-ти лет на рынке
+				.col-lg-4.col-md-6
+					+e.item
+						+e.img
+							img(src="img/our-advantages__img2.png")
+						p Более 1000 реализованых проектов
+				.col-lg-4.col-md-6
+					+e.item
+						+e.img
+							img(src="img/our-advantages__img3.png")
+						p Индивидуальный подход к каждому клиенту
+				.col-lg-4.col-md-6
+					+e.item
+						+e.img
+							img(src="img/our-advantages__img4.png")
+						p
+							| Широкий ассортимент материалов
+				.col-lg-4.col-md-6
+					+e.item
+						+e.img
+							img(src="img/our-advantages__img5.png")
+						p 24 месяца гарантии
+				.col-lg-4.col-md-6
+					+e.item
+						+e.img
+							img(src="img/our-advantages__img6.png")
+						p Минимальный срок выполнения заказа
+	// Секция we-do
+	+b.SECTION.we-do
 		.container
-			h2 OWL Слайдер
-			.owl-carousel.owl-theme
-				.item
-					h3 Слайдер 1
-				.item
-					h3 Слайдер 2
-			h2 Swiper
-			.swiper-container
-				.swiper-wrapper
-					.swiper-slide Slide 1
-					.swiper-slide Slide 2
-					.swiper-slide Slide 3
-					.swiper-slide Slide 4
-					.swiper-slide Slide 5
-					.swiper-slide Slide 6
-					.swiper-slide Slide 7
-					.swiper-slide Slide 8
-					.swiper-slide Slide 8
-					.swiper-slide Slide 10
-				.swiper-pagination
-			div Пример checkbox
-			label.check.noselect
-				input(type='checkbox')
-				i.fa.fa-1.fa-square-o
-				i.fa.fa-2.fa-check-square-o
-				span первый чек
-			label.check.noselect
-				input(type='checkbox')
-				i.fa.fa-1.fa-square-o
-				i.fa.fa-2.fa-check-square-o
-				span второй чек
-			div Пример radio button
-			label.radio.noselect
-				input(type='radio', name='radio')
-				i.fa.fa-1.fa-square-o
-				i.fa.fa-2.fa-check-square-o
-				span первый чек
-			label.radio.noselect
-				input(type='radio', name='radio', checked='')
-				i.fa.fa-1.fa-square-o
-				i.fa.fa-2.fa-check-square-o
-				span второй чек
-			h3 Пример Select на плагине Select2
-				h4 с тегами
-				.select2-wrap
-					select.select2-tags.form-control(multiple)
-						option angular
-						option react
-						option vui
-						option(disabled) ember
-						option backbone
-				h4 обычный
-				.select2-wrap
-					select.select2
-						option angular
-						option react
-						option vue
-						option(disabled) ember
-						option backbone
-						option angular
-						option react
-						option vue
-						option(disabled) ember
-						option backbone
+			+e.inner-wrap
+				+e.title.-main-pattern-bg
+					h2 Мы делаем:
+					+e.slider-navigation
+						.button-prev.noselect
+							i.fa.fa-angle-left
+						.button-next.noselect
+							i.fa.fa-angle-right
+				+e.slider
+					.swiper-wrapper
+						.swiper-slide
+							.swiper-slide__img
+								a(href="#")
+									img(src="img/we-do-slider-img.jpg")
+									.swiper-slide__title-slide
+										| Ш К А Ф Ы - К У П Е
+						.swiper-slide
+							.swiper-slide__img
+								a(href="#")
+									img(src="img/we-do-slider-img2.jpg")
+									.swiper-slide__title-slide
+										| К У Х Н И
+						.swiper-slide
+							.swiper-slide__img
+								a(href="#")
+									img(src="img/we-do-slider-img3.jpg")
+									.swiper-slide__title-slide
+										| С П А Л Ь Н И
+						.swiper-slide
+							.swiper-slide__img
+								a(href="#")
+									img(src="img/we-do-slider-img4.jpg")
+									.swiper-slide__title-slide
+										| Д Е Т С К И Е
+						.swiper-slide
+							.swiper-slide__img
+								a(href="#")
+									img(src="img/we-do-slider-img4.jpg")
+									.swiper-slide__title-slide
+										| В А Н Н Ы Е
+						.swiper-slide
+							.swiper-slide__img
+								a(href="#")
+									img(src="img/we-do-slider-img4.jpg")
+									.swiper-slide__title-slide
+										| К У Х Н И
+	// Секция rates
+	+b.SECTION.rates
+		.container
+			+e.item
+				.row
+					.col-lg-8
+						+e.item-description
+							h3 Шкаф-купе
+								|
+								span  СТАНДАРТ
+							p
+								| Составляющая: ДСП Украина, раздвижная система ARIO, наполнение дверей ДСП,
+								| полки, штанга для одежды (без ящиков).
+							+e.item-price-wrap
+								+e.item-price
+									| Цена: от
+									|
+									span 5 000 грн.
+								+e.item-link
+									a(href="#" class="main_btn2") ЗАКАЗАТЬ
+										i.fa.fa-long-arrow-right
+					+e.item-img-block
+						img(src="img/rates-img.jpg")
+					+e.item-img-bg.-main-pattern-bg
+			+e.item
+				.row
+					.col-lg-8
+						+e.item-description
+							h3 Шкаф-купе
+								|
+								span  ПРЕСТИЖ
+							p
+								| Составляющая: ДСП Украина, раздвижная система ARIO, наполнение дверей ДСП,
+								| полки, штанга для одежды (без ящиков).
+							+e.item-price-wrap
+								+e.item-price
+									| Цена: от
+									|
+									span 10 000 грн.
+								+e.item-link
+									a(href="#" class="main_btn2") ЗАКАЗАТЬ
+										i.fa.fa-long-arrow-right
+					+e.item-img-block
+						img(src="img/rates-img2.jpg")
+					+e.item-img-bg.-main-pattern-bg
+			+e.item
+				.row
+					.col-lg-8
+						+e.item-description
+							h3 Шкаф-купе
+								|
+								span  ЭЛИТ
+							p
+								| Составляющая: ДСП Украина, раздвижная система ARIO, наполнение дверей ДСП,
+								| полки, штанга для одежды (без ящиков).
+							+e.item-price-wrap
+								+e.item-price
+									| Цена: от
+									|
+									span 15 000 грн.
+								+e.item-link
+									a(href="#" class="main_btn2") ЗАКАЗАТЬ
+										i.fa.fa-long-arrow-right
+					+e.item-img-block
+						img(src="img/rates-img3.jpg")
+					+e.item-img-bg.-main-pattern-bg
+	// Секция calculate-price
+	+b.SECTION.calculate-price
+		.container
+			+e.title
+				| цена варьируется в зависимости от размеров и материалов изделия
+			+e.item-link
+				a(href="#" class="main_btn") Рассчитать
+					i.fa.fa-long-arrow-right
+	// Секция partners
+	+b.SECTION.partners
+		.container
+			+e.inner-wrap
+				.row
+					.col-lg-3
+						+e.title.-main-pattern-bg
+							h2 Партнёры:
+							+e.slider-navigation
+								.button-prev.noselect
+									i.fa.fa-angle-left
+								.button-next.noselect
+									i.fa.fa-angle-right
+					.col-lg-9.slider-center
+						+e.slider
+							.swiper-wrapper
+								.swiper-slide
+									.swiper-slide__img
+										img(src="img/partners-img.jpg")
+								.swiper-slide
+									.swiper-slide__img
+										img(src="img/partners-img2.jpg")
+								.swiper-slide
+									.swiper-slide__img
+										img(src="img/partners-img3.jpg")
 	// Секция  ask-form-title
 	+b.SECTION.intermediate
 		.container
