@@ -250,7 +250,124 @@
 // Секция stages-of-work
 .stages-of-work
 	padding-top: 50px
-	background-color: #fff
+	padding-bottom: 50px
+	background: #fff url(../img/stages-of-work-bg.jpg) center 120px no-repeat
+	.row
+		&:first-of-type
+			margin-bottom: 50px
+	&__title
+		min-height: 140px
+		display: flex
+		align-items: center
+		justify-content: center
+		h2
+			margin: 0
+			line-height: 0.8
+	&__item-line
+		overflow: hidden
+	&__item-line-wrap
+		display: flex
+		align-items: center
+	&__item
+		margin-bottom: 50px
+		span
+			margin-left: 70px
+			fz(32)
+			font-family: $font_ProximaNovaSemibold
+		&:nth-of-type(6)
+			img
+				margin-left: 5px
+	&__item-txt
+		display: flex
+		align-items: center
+// Секция .submit-your-application
+.submit-your-application
+	padding-top: 60px
+	padding-bottom: 60px
+	background-color: #f3f3f3
+	&__title
+		height: 220px
+		padding-left: 30px
+		display: flex
+		align-items: center
+	&__form
+		form
+			margin-top: 30px
+		.input_wrap
+			i
+				top: 10px
+		input
+			width: 100%
+			height: 34px
+			margin-bottom: 20px
+			padding-left: 30px
+			line-height: 35px
+			color: $main_txt_color
+			font-family: $font_ProximaNovaLight
+			background-color: #fff
+			border: 1px solid transparent
+			transition: border 0.5s
+			&:hover
+				outline: 0
+			&:active
+				outline: 0
+				border: 1px solid $main_color
+			&:focus
+				outline: 0
+				border: 1px solid $main_color
+.completed-orders
+	padding-top: 50px
+	padding-bottom: 50px
+	background: #fff
+	.row
+		&:first-of-type
+			margin-bottom: 60px
+	&__title
+		min-height: 140px
+		display: flex
+		align-items: center
+		justify-content: center
+		h2
+			margin: 0
+			line-height: 0.8
+	&__item
+		margin-bottom: 30px
+		display: flex
+	&__item-img
+		width: 270px
+		height: 200px
+		flex-shrink 0
+		img
+			max-width 100%
+			height: auto
+	&__item-txt
+		width: 310px
+		padding: 20px 20px 20px 30px
+		flex-shrink 0
+		box-shadow: 0 6px 15.5px 1.5px rgba(51, 51, 51, 0.1), 0 5px 15.5px 1.5px rgba(51, 51, 51, 0.1)
+		position: relative
+		&:after
+			css-triangle(#fff,right,10px)
+			top: calc(50% - 5px)
+			right: -20px
+		h3
+			margin-bottom: 15px
+			fz(22)
+			span
+				text-transform: uppercase
+				font-family: $font_ProximaNovaSemibold
+				color: $main_color
+		p
+			max-height 115px
+			overflow: hidden
+// Секция what-they-say-about-us
+.what-they-say-about-us
+	padding-top: 50px
+	padding-bottom: 50px
+	background: #fff
+	.row
+		&:first-of-type
+			margin-bottom: 60px
 	&__title
 		min-height: 140px
 		display: flex

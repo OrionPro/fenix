@@ -232,11 +232,154 @@ block main
 				.col-lg-12
 					+e.title.-main-pattern-bg
 						h2 ЭТАПЫ РАБОТЫ:
+			+e.item.row
+				+e.item-line-wrap.col-xl-3
+					+e.item-line
+						img(src="img/stages-of-work-line.png")
+				+e.item-txt.col-xl-5.offset-xl-4
+					img(src="img/stages-of-work-num.png")
+					span
+						| ЗАМЕР
+			+e.item.row
+				+e.item-line-wrap.col-xl-4
+					+e.item-line
+						img(src="img/stages-of-work-line.png")
+				+e.item-txt.col-xl-5.offset-xl-3
+					img(src="img/stages-of-work-num2.png")
+					span
+						| ДИЗАЙН
+			+e.item.row
+				+e.item-line-wrap.col-xl-5
+					+e.item-line
+						img(src="img/stages-of-work-line.png")
+				+e.item-txt.col-xl-5.offset-xl-2
+					img(src="img/stages-of-work-num3.png")
+					span
+						| ИЗГОТОВЛЕНИЕ
+			+e.item.row
+				+e.item-line-wrap.col-xl-6
+					+e.item-line
+						img(src="img/stages-of-work-line.png")
+				+e.item-txt.col-xl-5.offset-xl-1
+					img(src="img/stages-of-work-num4.png")
+					span
+						| ДОСТАВКА
+			+e.item.row
+				+e.item-line-wrap.col-xl-7
+					+e.item-line
+						img(src="img/stages-of-work-line.png")
+				+e.item-txt.col-xl-5
+					img(src="img/stages-of-work-num5.png")
+					span
+						| МОНТАЖ
+	// Секция submit-your-application
+	+b.SECTION.submit-your-application
+		.container
+			.row
+				.col-xl-5
+					+e.title.-main-pattern-bg
+						h2
+							| ОСТАВИТЬ ЗАЯВКУ НА
+							| ВЫЕЗД ЗАМЕРЩИКА:
+				.col-xl-6.offset-xl-1
+					+e.form
+						form
+							.input_wrap
+								i.fa.fa-check
+								input(name="name" type="text" placeholder="Ваше имя")
+							.input_wrap
+								i.fa.fa-check
+								input(name="phone_mask" type="tel" class="mask" placeholder="+38(___) ___-__-__")
+							button(type="submit" class="main_btn") Отправить
+								i.fa.fa-long-arrow-right
+	// Секция completed-orders
+	+b.SECTION.completed-orders
+		.container
+			.row
+				.col-lg-12
+					+e.title.-main-pattern-bg
+						h2 ВЫПОЛНЕННЫЕ ЗАКАЗЫ:
+			.row.item-wrap
+				.col-xl-6
+					+e.item
+						+e.item-img
+							img(src="img/completed-orders-img.jpg")
+						+e.item-txt
+							h3
+								| Шкаф-купе
+								|
+								span ЭЛИТ
+							p
+								|    Lorem ipsum dolor sit amet, consect
+								| etur adipisicing elit, sed do eiusmod
+								| tempor incididunt utlabore et dolore
+								| magna aliqua. Ut enim ad minim veni
+								| nim ad minim nim ad minimnim ad
+								| minimam.
+				.col-xl-6
+					+e.item
+						+e.item-img
+							img(src="img/completed-orders-img.jpg")
+						+e.item-txt
+							h3
+								| Шкаф-купе
+								|
+								span ЭЛИТ
+							p
+								|    Lorem ipsum dolor sit amet, consect
+								| etur adipisicing elit, sed do eiusmod
+								| tempor incididunt utlabore et dolore
+								| magna aliqua. Ut enim ad minim veni
+								| nim ad minim nim ad minimnim ad
+								| minimam.
+			.row.item-wrap
+				.col-xl-6
+					+e.item
+						+e.item-txt
+							h3
+								| Шкаф-купе
+								|
+								span ЭЛИТ
+							p
+								|    Lorem ipsum dolor sit amet, consect
+								| etur adipisicing elit, sed do eiusmod
+								| tempor incididunt utlabore et dolore
+								| magna aliqua. Ut enim ad minim veni
+								| nim ad minim nim ad minimnim ad
+								| minimam. nim ad minim nim ad minimnim ad
+								|                                | minimam.nim ad minim nim ad minimnim ad
+								|                                | minimam.
+						+e.item-img
+							img(src="img/completed-orders-img.jpg")
+				.col-xl-6
+					+e.item
+						+e.item-txt
+							h3
+								| Шкаф-купе
+								|
+								span ЭЛИТ
+							p
+								|    Lorem ipsum dolor sit amet, consect
+								| etur adipisicing elit, sed do eiusmod
+								| tempor incididunt utlabore et dolore
+								| magna aliqua. Ut enim ad minim veni
+								| nim ad minim nim ad minimnim ad
+								| minimam.
+						+e.item-img
+							img(src="img/completed-orders-img.jpg")
+	// Секция what-they-say-about-us
+	+b.SECTION.what-they-say-about-us
+		.container
+			.row
+				.col-lg-12
+					+e.title.-main-pattern-bg
+						h2 ЧТО О НАС ГОВОРЯТ:
+
 	// Секция ask-form-title
 	+b.SECTION.intermediate
 		.container
 			+e.title
-				h3 Заполните форму и мы бесплатно перезвоним и ответим на ваши вопросы
+				h2 Заполните форму и мы бесплатно перезвоним и ответим на ваши вопросы
 			+e.wrap
 				form#form-file.clearfix
 					.file_wrap
