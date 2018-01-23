@@ -304,7 +304,7 @@ block main
 					+e.item
 						+e.item-img
 							img(src="img/completed-orders-img.jpg")
-						+e.item-txt
+						+e.item-txt.left-side
 							h3
 								| Шкаф-купе
 								|
@@ -320,7 +320,7 @@ block main
 					+e.item
 						+e.item-img
 							img(src="img/completed-orders-img.jpg")
-						+e.item-txt
+						+e.item-txt.left-side
 							h3
 								| Шкаф-купе
 								|
@@ -332,10 +332,10 @@ block main
 								| magna aliqua. Ut enim ad minim veni
 								| nim ad minim nim ad minimnim ad
 								| minimam.
-			.row.item-wrap
+			.row.item-wrap.last
 				.col-xl-6
 					+e.item
-						+e.item-txt
+						+e.item-txt.right-side
 							h3
 								| Шкаф-купе
 								|
@@ -353,7 +353,7 @@ block main
 							img(src="img/completed-orders-img.jpg")
 				.col-xl-6
 					+e.item
-						+e.item-txt
+						+e.item-txt.right-side
 							h3
 								| Шкаф-купе
 								|
@@ -367,6 +367,9 @@ block main
 								| minimam.
 						+e.item-img
 							img(src="img/completed-orders-img.jpg")
+			+e.btn-wrap
+				button(type="button" class="main_btn") ПОКАЗАТЬ ЕЩЕ
+					i.fa.fa-long-arrow-right
 	// Секция what-they-say-about-us
 	+b.SECTION.what-they-say-about-us
 		.container
@@ -374,7 +377,38 @@ block main
 				.col-lg-12
 					+e.title.-main-pattern-bg
 						h2 ЧТО О НАС ГОВОРЯТ:
-
+			+e.slider
+				.swiper-wrapper
+					.swiper-slide
+						.swiper-slide__img
+							img(src="img/we-do-slider-img.jpg")
+						.swiper-slide__txt
+							p
+								| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								| incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+								| nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo conseq.
+							p
+								| Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+								| fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+								| qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde
+								| iste natus error sit voluptatem accusantium doloremque laudantium.
+							.name
+								| Имя Фамилия
+					.swiper-slide
+						.swiper-slide__img
+							img(src="img/we-do-slider-img.jpg")
+						.swiper-slide__txt
+							p
+								| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								| incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+								| nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo conseq.
+							p
+								| Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+								| fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+								| qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde
+								| iste natus error sit voluptatem accusantium doloremque laudantium.
+							.name
+								| Имя Фамилия
 	// Секция ask-form-title
 	+b.SECTION.intermediate
 		.container

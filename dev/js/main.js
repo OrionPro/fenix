@@ -161,6 +161,15 @@ $(document).ready(function () {
 			}
 		}
 	});
+	const swiperAboutUs = new Swiper('.what-they-say-about-us__slider', {
+		slidesPerView: 1,
+		loop: true,
+		navigation: {
+			nextEl: '.partners .button-prev',
+			prevEl: '.partners .button-next',
+
+		}
+	});
 	// Инициализация маски в input
 	$(".mask").mask("+38(999) 999-99-99");
 
