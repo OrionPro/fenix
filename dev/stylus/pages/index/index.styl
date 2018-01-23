@@ -319,9 +319,10 @@
 	padding-top: 50px
 	padding-bottom: 50px
 	background: #fff
-	.row
-		&:first-of-type
-			margin-bottom: 60px
+	.container
+		&>.row
+			&:first-of-type
+				margin-bottom: 60px
 	&__title
 		min-height: 140px
 		display: flex
@@ -341,7 +342,7 @@
 			max-width 100%
 			height: auto
 	&__item-txt
-		width: 310px
+		width: 300px
 		padding: 20px 20px 20px 30px
 		flex-shrink 0
 		box-shadow: 0 6px 15.5px 1.5px rgba(51, 51, 51, 0.1), 0 5px 15.5px 1.5px rgba(51, 51, 51, 0.1)
@@ -369,8 +370,12 @@
 	&__btn-wrap
 		text-align: center
 	.item-wrap
-		&.last
+		&:nth-last-of-type(2)
 			margin-bottom: 20px
+		&.hide
+			display: none
+		&.show
+			display: flex!important
 // Секция what-they-say-about-us
 .what-they-say-about-us
 	padding-top: 50px

@@ -170,6 +170,18 @@ $(document).ready(function () {
 
 		}
 	});
+	// Кнопка показать ещё completed-orders__btn-wrap
+	$('.completed-orders__btn-wrap button').on('click', function () {
+
+		$(this).parents('.completed-orders').find('.item-wrap.hide').slideToggle();
+		if($(this).hasClass('show')) {
+			$(this).removeClass('show');
+			$(this).text('ПОКАЗАТЬ ЕЩЕ');
+		} else {
+			$(this).addClass('show');
+			$(this).text('СКРЫТЬ');
+		}
+	});
 	// Инициализация маски в input
 	$(".mask").mask("+38(999) 999-99-99");
 
