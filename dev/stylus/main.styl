@@ -86,10 +86,12 @@ body
 		background-color: transparent
 //-webkit-font-smoothing: antialiased
 //-moz-osx-font-smoothing: grayscale
-
+.swiper-wrapper
+	box-sizing border-box
 h1
 	font($main_color, 32, $font_ProximaNovaSemibold, 1.2)
 h2
+	margin: 0
 	font($main_txt_color, 32, $font_ProximaNovaSemibold, 1.2)
 	text-transform: uppercase
 p,ul
@@ -648,6 +650,7 @@ nav[canvas]
 		height: 40px
 		text-align: center
 		display: block
+		border: 1px solid #ebebeb
 		background-color: transparent
 		font($main_txt_color, 14, $font_ProximaNovaRegular)
 		line-height: 40px
@@ -655,14 +658,17 @@ nav[canvas]
 		transition: .5s
 		position: relative
 		&:hover
+			border: 1px solid #f8a80f
 			background-color: #f8a80f
 			color: #fff
 		&:hover i
 			color: #fff
 		&:active
+			border: 1px solid #f8a80f
 			text-decoration: none
 			color: #fff
 		&:focus
+			border: 1px solid #f8a80f
 			text-decoration: none
 			color: #fff
 		i

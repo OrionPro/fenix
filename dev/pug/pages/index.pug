@@ -9,33 +9,36 @@ block main
 		.swiper-wrapper
 			.swiper-slide
 				.container
-					+e.title
-						h1
-							| ПРОИЗВОДСТВО КОРПУСНОЙ МЕБЕЛИ НА ЗАКАЗ
-						p
-							| Для жилых, гостиничных и офисных
-							| помещений по Вашим размерам и
-							| пожеланиям
-						+e.links-wrap
-							a(href="#" class="main_btn") СМОТРЕТЬ ФОТО
-								i.fa.fa-long-arrow-right
-							a(href="#" class="main_btn") БЕСПЛАТНЫЙ ЗАМЕР
-								i.fa.fa-long-arrow-right
+					.row
+						.offset-xl-1
+							+e.title
+								h1
+									| ПРОИЗВОДСТВО КОРПУСНОЙ МЕБЕЛИ НА ЗАКАЗ
+								p
+									| Для жилых, гостиничных и офисных
+									| помещений по Вашим размерам и
+									| пожеланиям
+								+e.links-wrap
+									a(href="#" class="main_btn") СМОТРЕТЬ ФОТО
+										i.fa.fa-long-arrow-right
+									a(href="#" class="main_btn") БЕСПЛАТНЫЙ ЗАМЕР
+										i.fa.fa-long-arrow-right
 			.swiper-slide
 				.container
 					.row
-						+e.title
-							h1
-								| ПРОИЗВОДСТВО ЧЕГО ТО ТАМ ЕЩЁ
-							p
-								| Для жилых, гостиничных и офисных
-								| помещений по Вашим размерам и
-								| пожеланиям
-							+e.links-wrap
-								a(href="#" class="main_btn") СМОТРЕТЬ ФОТО
-									i.fa.fa-long-arrow-right
-								a(href="#" class="main_btn") БЕСПЛАТНЫЙ ЗАМЕР
-									i.fa.fa-long-arrow-right
+						.offset-xl-1
+							+e.title
+								h1
+									| ПРОИЗВОДСТВО ЧЕГО ТО ТАМ ЕЩЁ
+								p
+									| Для жилых, гостиничных и офисных
+									| помещений по Вашим размерам и
+									| пожеланиям
+								+e.links-wrap
+									a(href="#" class="main_btn") СМОТРЕТЬ ФОТО
+										i.fa.fa-long-arrow-right
+									a(href="#" class="main_btn") БЕСПЛАТНЫЙ ЗАМЕР
+										i.fa.fa-long-arrow-right
 		+e.slider-control
 			+e.slider-navigation
 				.swiper-button-prev
@@ -418,76 +421,77 @@ block main
 			+e.slider
 				.swiper-wrapper
 					.swiper-slide
-						.swiper-slide__img
-							img(src="img/we-do-slider-img.jpg")
-						.swiper-slide__txt
-							p
-								| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								| incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-								| nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo conseq.
-							p
-								| Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-								| fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-								| qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde
-								| iste natus error sit voluptatem accusantium doloremque laudantium.
-							.name
-								| Имя Фамилия
+						.swiper-slide__decor-quote-icon
+							img(src="img/what-they-say-about-us-slider-quote-icon.png")
+						.swiper-slide__decor-block.left.-main-pattern-bg
+						.swiper-slide__decor-block.right.-main-pattern-bg
+						.swiper-slide__inner
+							.swiper-slide__img
+								img(src="img/what-they-say-about-us-slider-img.jpg")
+							.swiper-slide__txt
+								.swiper-slide__txt-inner
+									p
+										| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodv
+										| incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+										| nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo conseq.
+									p
+										| Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+										| fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+										| qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde
+										| iste natus error sit voluptatem accusantium doloremque laudantium.
+								.name
+									| Александр Морозов
 					.swiper-slide
-						.swiper-slide__img
-							img(src="img/we-do-slider-img.jpg")
-						.swiper-slide__txt
-							p
-								| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-								| incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-								| nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo conseq.
-							p
-								| Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-								| fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-								| qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde
-								| iste natus error sit voluptatem accusantium doloremque laudantium.
-							.name
-								| Имя Фамилия
-	// Секция ask-form-title
-	+b.SECTION.intermediate
+						.swiper-slide__decor-quote-icon
+							img(src="img/what-they-say-about-us-slider-quote-icon.png")
+						.swiper-slide__decor-block.left.-main-pattern-bg
+						.swiper-slide__decor-block.right.-main-pattern-bg
+						.swiper-slide__inner
+							.swiper-slide__img
+								img(src="img/what-they-say-about-us-slider-img.jpg")
+							.swiper-slide__txt
+								.swiper-slide__txt-inner
+									p
+										| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodv
+										| incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+										| nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo conseq.
+									p
+										| Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+										| fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+										| qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde
+										| iste natus error sit voluptatem accusantium doloremque laudantium.
+								.name
+									| Юрий Жаров
+				+e.slider-control
+					+e.slider-navigation
+						.swiper-button-prev
+							i.fa.fa-angle-left
+						.swiper-button-next
+							i.fa.fa-angle-right
+	// Секция calculation-of-the-cost-of-photo
+	+b.SECTION.calculation-of-the-cost-of-photo
 		.container
-			+e.title
-				h2 Заполните форму и мы бесплатно перезвоним и ответим на ваши вопросы
-			+e.wrap
-				form#form-file.clearfix
-					.file_wrap
-						input(type='file' name='field' multiple)
-					.row
-						+e.item.col-lg-3.col-md-4.col-sm-4
+			.row
+				.col-xl-5.flex-center
+					+e.title.-main-pattern-bg
+						h2
+							| РАСЧЕТ СТОИМОСТИ
+							br
+							| ПО ФОТО:
+				.col-xl-6.offset-xl-1
+					+e.form
+						form#form-file
 							.input_wrap
 								i.fa.fa-check
-								input(name='name', type='text', placeholder='Имя')
-						+e.item.col-lg-3.col-md-4.col-sm-4
+								input(name="phone_mask" type="tel" class="mask" placeholder="+38(___) ___-__-__")
+							.input_wrap
+								input(type='file' value='' multiple='' accept='image/*' name="field")
+								.fileLoad
+									input(type='text' id="file" value='Выберите файл')
+									button(type='button' class="main_btn") ЗАГРУЗИТЬ ФОТО
+										i.fa.fa-long-arrow-right
 							.input_wrap
 								i.fa.fa-check
-								input(name='email', type='email', placeholder='Почта')
-						+e.item.col-lg-3.col-md-4.col-sm-4
-							.input_wrap
-								i.fa.fa-check
-								input(name='phone', type='tel', placeholder='Телефон')
-						input(type='hidden', name='form_name', value='')
-						input(type='hidden', name='form_type', value='normal')
-						+e.item.col-lg-3
-							input(type='submit', value='Записаться')
-			h3 Пример табов с вложенностью ещё одного таба
-			.tabs-items-wrap
-				button.main_btn.tabs-item.active Мужские размеры
-				button.main_btn.tabs-item Женские размеры
-			.tabs-wrap.active
-				p.
-					Lorem ipsum dolor sit amet, an eam simul albucius. An ius duis aeque suscipit, ius ullum suscipit eu. Detracto ponderum pertinacia ei his, nonumy omnium adipisci nec ei, ea ludus dictas fuisset qui.
-			.tabs-wrap
-				p.
-					Persius volumus est cu! Ad populo erroribus sed. Timeam legimus maiorum usu te, civibus detracto at vel. Accusata lobortis in sed, et tempor saperet qui. Eu timeam salutandi quaerendum his.
-				h4 Вложенный таб
-				.tabs-items-wrap-inner
-					button.main_btn.tabs-item.active Мужские размеры 2
-					button.main_btn.tabs-item Женские размеры 2
-					.tabs-wrap-inner.active
-						p Detracto ponderum pertinacia ei his, nonumy omnium adipisci nec ei, ea ludus dictas fuisset qui.
-					.tabs-wrap-inner
-						p Accusata lobortis in sed, et tempor saperet qui. Eu timeam salutandi quaerendum his.
+								textarea(name="textarea" placeholder="Напишите ваши замеры и пожелания")
+							button(type="submit" class="main_btn") Отправить
+								i.fa.fa-long-arrow-right

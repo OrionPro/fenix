@@ -1,3 +1,14 @@
+.swiper-button-prev,.swiper-button-next
+	display: inline-block
+	position: relative
+	background-image: none
+	width: inherit
+	height: inherit
+	top: inherit
+	left: inherit
+	right: inherit
+	margin: 0
+	user-select: none
 // Секция top-section
 .top-section
 	text-align: center
@@ -41,7 +52,7 @@
 	&__links-wrap
 		position: absolute
 		top: 50%
-		right: -356px
+		right: -350px
 		transform translateY(-50%)
 		a
 			min-width: 200px
@@ -52,16 +63,6 @@
 	.swiper-wrapper
 		box-sizing border-box
 	.swiper-button-prev,.swiper-button-next
-		display: inline-block
-		position: relative
-		background-image: none
-		width: inherit
-		height: inherit
-		top: inherit
-		left: inherit
-		right: inherit
-		margin: 0
-		user-select: none
 		&:hover i
 			color: $main_color
 		i
@@ -345,7 +346,7 @@
 		width: 300px
 		padding: 20px 20px 20px 30px
 		flex-shrink 0
-		box-shadow: 0 6px 15.5px 1.5px rgba(51, 51, 51, 0.1), 0 5px 15.5px 1.5px rgba(51, 51, 51, 0.1)
+		box-shadow: 0 6px 15.5px 1.5px rgba(51, 51, 51, 0.1), 0 0 15.5px 1.5px rgba(51, 51, 51, 0.1)
 		position: relative
 		&.right-side
 			&:after
@@ -394,45 +395,165 @@
 			line-height: 0.8
 	&__slider
 		overflow: hidden
-// Секция intermediate
-.intermediate
-	text-align: center
-	background-color: #00b6f4
-	padding-top: 50px
-	padding-bottom: 50px
-	.intermediate__title
-		max-width: 650px
-		margin: auto
-		color: #052243
-		h3
-			margin: 0
-			text-transform: uppercase
-			fz(24)
-			color: #052243
-	.intermediate__wrap
-		margin-top: 40px
+		padding-top: 10px
+	.swiper-slide__inner
+		width: 1110px
+		height: 300px
+		background: #fff
+		margin: 30px auto 85px
+		padding-left: 40px
+		padding-top: 80px
+		padding-right: 25px
+		display: flex
+		box-shadow: 0 6px 15.5px 1.5px rgba(51, 51, 51, 0.1), 0 0 15.5px 1.5px rgba(51, 51, 51, 0.1)
+	.swiper-slide__img
+		margin-right: 30px
+		flex-shrink 0
+	.swiper-slide__txt
+		width: 510px
+		flex-shrink 0
+		p
+			font-family: $font_ProximaNovaLight
+			margin-bottom: 15px
+		.name
+			font-family: $font_main_regular
+			font-size: 18px
+	.swiper-slide__txt-inner
+		height: 150px
+		margin-bottom: 20px
+		overflow: hidden
+	.swiper-slide__decor-block
+		width: 270px
+		height: 360px
+		position: absolute
+		top: 0
+		z-index: -1
+		&.left
+			left: 0
+		&.right
+			right: 0
+	.swiper-slide__decor-quote-icon
+		position: absolute
+		top: -10px
+		left: 50%
+		transform translateX(-50%)
+	&__slider-control
+		width: 70px
+		height: 70px
+		display: flex
+		align-items: center
+		justify-content: center
+		position: absolute
+		bottom: 5px
+		left: 51.4%
+		right: 0
+		background-color: #f3f3f3
+		border-radius: 35px
+		z-index: 10
+	.swiper-button-prev,.swiper-button-next
+		i
+			font-size: 26px
+			transition: 0.5s
+			&:hover
+				color $main_color
+	.swiper-button-prev
+		margin-right: 10px
+// Секция calculation-of-the-cost-of-photo
+.calculation-of-the-cost-of-photo
+	padding-top: 60px
+	padding-bottom: 60px
+	background-color: #f3f3f3
+	&__title
+		width: 100%
+		height: 220px
+		padding-left: 30px
+		display: flex
+		align-items: center
+		flex-shrink 0
+	&__form
 		form
-			.intermediate__item
-				margin-bottom: 20px
-				input
-					width: 100%
-					display: inline-block
-					border: 1px solid #a2b6c9
-					background: #fff
-					color: #43637f
-					height: 40px
-					padding: 0 0 0 9px
-					&::-webkit-input-placeholder
-						color: #43637f
-					&:-moz-placeholder
-						color: #43637f
-					&::-moz-placeholder
-						color: #43637f
-					&:-ms-input-placeholder
-						color: #43637f
-				input[type=submit]
-					background: #fff
-					color: #43637f
+			margin-top: 30px
+		.input_wrap
+			overflow: hidden
+			i
+				top: 10px
+		input
+			width: 100%
+			height: 34px
+			margin-bottom: 20px
+			padding-left: 30px
+			line-height: 35px
+			color: $main_txt_color
+			font-family: $font_ProximaNovaLight
+			background-color: #fff
+			border: 1px solid transparent
+			transition: border 0.5s
+			&:hover
+				outline: 0
+			&:active
+				outline: 0
+				border: 1px solid $main_color
+			&:focus
+				outline: 0
+				border: 1px solid $main_color
+		input[type=file]
+			width: 100
+			height: 50px
+			opacity: 0
+			position: absolute
+			top: 0
+			right: 0
+			z-index: 200
+			margin: 0
+			cursor: pointer
+		textarea
+			width: 100%
+			height: 80px
+			margin-bottom: 20px
+			padding-left: 30px
+			line-height: 35px
+			color: $main_txt_color
+			font-family: $font_ProximaNovaLight
+			background-color: #fff
+			border: 1px solid transparent
+			transition: border 0.5s
+			&:hover
+				outline: 0
+			&:active
+				outline: 0
+				border: 1px solid $main_color
+			&:focus
+				outline: 0
+				border: 1px solid $main_color
+		.fileLoad
+			cursor: pointer
+			button
+				width: 268px
+				position: absolute
+				right: -1px
+				top: 0
+				i
+					color: #fff
+				&.button-hover
+					background-color: #333333
+					color: #fff
+					text-decoration: none
+					outline: 0
+					i
+						left: 10px
+			input
+				width: 270px
+				height: 51px
+				margin-bottom: 17px
+				line-height: 50px
+				white-space: nowrap
+				text-overflow: ellipsis
+			i.fa-long-arrow-right
+				position: relative
+				top: 0
+				left: 0
+				display: inline-block
+
 
 //	Секция
 //	Секция

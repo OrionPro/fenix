@@ -94,6 +94,7 @@ $(document).ready(function () {
 	// инициализация swiper слайдера
 	const swiper = new Swiper('.top-section', {
 		slidesPerView: 1,
+		effect: 'fade',
 		navigation: {
 			nextEl: '.top-section__slider-navigation .swiper-button-next',
 			prevEl: '.top-section__slider-navigation .swiper-button-prev',
@@ -164,9 +165,10 @@ $(document).ready(function () {
 	const swiperAboutUs = new Swiper('.what-they-say-about-us__slider', {
 		slidesPerView: 1,
 		loop: true,
+		effect: 'coverflow',
 		navigation: {
-			nextEl: '.partners .button-prev',
-			prevEl: '.partners .button-next',
+			nextEl: '.what-they-say-about-us .swiper-button-prev',
+			prevEl: '.what-they-say-about-us .swiper-button-next',
 
 		}
 	});
@@ -209,11 +211,9 @@ $(document).ready(function () {
 		$('.check i, .radio i').css("margin-top", "2px")
 	}
 	if (get_name_browser() == "Google Chrome") {
-		console.log("Google Chrome");
 
 	}
 	if (get_name_browser() == "Safari") {
-		console.log("Safari");
 		// heightItemSafari({
 		// 	itemHeight: '.info-blocks__item-txt-block',
 		// 	itemHeightBorder: 2,

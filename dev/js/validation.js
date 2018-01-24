@@ -18,7 +18,8 @@ $(document).ready(function () {
 	});
 	$('input[type=file]').tooltipster({
 		trigger: 'none', // чтобы при ховере и клике не вылетало окошко с ошибкой ставим none. Либо hover/click по надобности
-		position: 'bottom',
+		position: ['left', 'bottom'],
+		parent: '.calculation-of-the-cost-of-photo',
 		theme: 'tooltipster-shadow',
 		functionPosition: function (instance, helper, position) {
 			position.coord.top -= 10;
