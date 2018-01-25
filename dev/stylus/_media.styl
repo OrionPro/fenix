@@ -17,8 +17,29 @@
 	// для фиксированного сайта
 	// body
 	// 	width: 1200px
+	.header
+		.row
+			width: 960px!important
+			padding-top: 5px
+			padding-bottom: 5px
 	.header__modal
 		margin-top: 20px
+	.header__logo
+		margin-right: 30px
+		img
+			width: 70%
+			height: auto
+	.header__modal
+		margin-top: 0
+		a
+			width: 150px
+	.header__nav
+		ul
+			li
+				a
+					margin-right: 30px
+	.header__social-link-wrap
+		margin-right: 15px
 	.intermediate
 		.intermediate_wrap
 			margin-bottom: 20px
@@ -33,13 +54,14 @@
 // Medium devices (tablets, less than 992px)
 @media only screen and (max-width : 991px)
 	/**/
+	.header
+		.row
+			width: 720px!important
 	.header__nav
 		display: none
 	.header__logo
 		display: block
 		margin-top: 0
-	.header__modal
-		margin-top: 40px
 	nav[canvas]
 		display: block
 // Small devices (landscape phones, less than 768px)

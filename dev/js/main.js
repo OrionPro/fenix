@@ -87,7 +87,8 @@ $(document).ready(function () {
 			theme: 'tooltipster-shadow'
 		});
 		$(".header__logo a").tooltipster({
-			theme: 'tooltipster-light'
+			plugins: ['follower'],
+			theme: 'tooltipster-shadow'
 		});
 	}
 
