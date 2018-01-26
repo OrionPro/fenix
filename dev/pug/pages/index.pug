@@ -293,6 +293,8 @@ block main
 							.input_wrap
 								i.fa.fa-check
 								input(name="phone_mask" type="tel" class="mask" placeholder="+38(___) ___-__-__")
+							input(type='hidden', name='form_name', value='')
+							input(type='hidden', name='form_type', value='normal')
 							button(type="submit" class="main_btn") Отправить
 								i.fa.fa-long-arrow-right
 	// Секция completed-orders
@@ -487,11 +489,19 @@ block main
 							.input_wrap
 								input(type='file' value='' multiple='' accept='image/*' name="field")
 								.fileLoad
-									input(type='text' id="file" value='Выберите файл')
+									input(type='text' id="file" placeholder='Выберите файл')
 									button(type='button' class="main_btn") ЗАГРУЗИТЬ ФОТО
 										i.fa.fa-long-arrow-right
 							.input_wrap
 								i.fa.fa-check
 								textarea(name="textarea" placeholder="Напишите ваши замеры и пожелания")
+							input(type='hidden', name='form_name', value='')
+							input(type='hidden', name='form_type', value='normal')
 							button(type="submit" class="main_btn") Отправить
 								i.fa.fa-long-arrow-right
+	// Секция up
+	+b.SECTION.up
+		.container
+			+e.arrow
+				a(href="#" class="scroll_to" data-scroll="header")
+					i.fa.fa-angle-up

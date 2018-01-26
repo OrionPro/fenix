@@ -162,8 +162,6 @@ $(document).ready(function () {
 
 	/* Добавляем новый класс кнопке если инпут файл получил фокус */
 	$('input[type=file]').hover(function() {
-		console.log('на файле');
-
 		$(this).parent().find('button').addClass('button-hover');
 	}, function() {
 		$(this).parent().find('button').removeClass('button-hover');

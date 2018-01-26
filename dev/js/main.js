@@ -68,14 +68,17 @@ $(document).ready(function () {
 	setTimeout(function () {
 		bottomSpacingS = $(document).outerHeight() - ($('.top-section').outerHeight() + $('.top-section').offset().top);
 	}, 500);
-
-	setTimeout(function () {
-		$(".sticky").sticky({
-			topSpacing: 0,
-			//bottomSpacing: bottomSpacingS,
-			widthFromWrapper: false
-		});
-	}, 600);
+	if (window.matchMedia("(min-width: 768px)").matches) {
+		setTimeout(function () {
+			$(".sticky").sticky({
+				topSpacing: 0,
+				//bottomSpacing: bottomSpacingS,
+				widthFromWrapper: false
+			});
+		}, 600);
+	} else {
+		$(".sticky").unstick();
+	}
 
 	// пример анимации через библиотечку animat (но лучше анимировать через GSAP)
 	//$('.our-advantages h2').animated("fadeInUp");
@@ -237,25 +240,56 @@ $(document).ready(function () {
 	// });
 
 	// Скролл по классу .scroll_to и атрибуту data-scroll у кнопки к примеру (data-scroll="куда скроллим" в элементе куда скроллим ставим id потом впишем в куда скроллим)
-	// $(".scroll_to").on("click", function(e) {
-	//     e.preventDefault();
-	//     var anchor = $(this);
-	//     $('html, body').stop().animate({
-	//         scrollTop: $("#" + anchor.data('scroll')).offset().top
-	//     }, 500);
-	//     return false;
-	// });
-});
-
-$(window).resize(function () {
-	$(".sticky").sticky({
-		topSpacing: 0,
-		//bottomSpacing: bottomSpacingS,
-		widthFromWrapper: false
+	$(".scroll_to").on("click", function(e) {
+	    e.preventDefault();
+	    var anchor = $(this);
+	    $('html, body').stop().animate({
+	        scrollTop: $("#" + anchor.data('scroll')).offset().top
+	    }, 500);
+	    return false;
 	});
 });
 
+$(window).resize(function () {
+	if (window.matchMedia("(min-width: 768px)").matches) {
+		setTimeout(function () {
+			$(".sticky").sticky({
+				topSpacing: 0,
+				//bottomSpacing: bottomSpacingS,
+				widthFromWrapper: false
+			});
+		}, 600);
+	} else {
+		$(".sticky").unstick();
+	}
+});
+
 $(window).scroll(function () {
+	if (window.matchMedia("(min-width: 768px)").matches) {
+		setTimeout(function () {
+			$(".sticky").sticky({
+				topSpacing: 0,
+				//bottomSpacing: bottomSpacingS,
+				widthFromWrapper: false
+			});
+		}, 600);
+	}
+	if (window.matchMedia("(max-width: 768px)").matches) {
+		$(".sticky").unstick();
+	}
+	// $(window).on('mousewheel', function(event) {
+	// 	if (event.originalEvent.wheelDelta >= 0) {
+	// 		//console.log('Scroll up');
+	// 		$('.sticky').on('sticky-start', function() {
+	// 			$(".header .row").addClass('sticky-animate');
+	// 		});
+	// 	}
+	// 	else {
+	// 		//console.log('Scroll down');
+	// 		$(".header .row").removeClass('sticky-animate');
+	// 	}
+	// });
+
 
 });
 
