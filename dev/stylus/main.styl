@@ -434,11 +434,15 @@ label
 	max-width: 100%
 	margin-bottom: 5px
 	font-weight: 700
-
+.sticky-wrapper
+	&.is-sticky
+		.sticky-animate
+			animation: fade-bot
+			animation-duration: 0.7s
 .nav-line
 	display: block
 	height: 3px
-	background: #fff
+	background: darken($main_color, 20%)
 	position: absolute
 	left: 0
 	width: 100%
@@ -515,6 +519,7 @@ label
 	transition: transform 0.4s
 	overflow: auto
 	-webkit-overflow-scrolling: touch
+	background-color: #ffd88d
 [off-canvas*=left]
 	width: 255px
 [canvas=container]
@@ -547,10 +552,16 @@ nav[canvas]
 [off-canvas]
 	ul
 		&.menu
-			margin: 0
-			padding: 0
+			margin: 0 0 20px 0
+			padding: 30px
 			display: block
 			list-style: none
+			li
+				margin-bottom: 5px
+				&:last-of-type
+					margin-bottom: 10px
+				a
+					color: $main_txt_color
 
 // Header
 .header
@@ -665,13 +676,15 @@ nav[canvas]
 		&:hover i
 			color: #fff
 		&:active
+			outline 0
 			border: 1px solid #f8a80f
 			text-decoration: none
-			color: #fff
+			color: $main_txt_color
 		&:focus
+			outline 0
 			border: 1px solid #f8a80f
 			text-decoration: none
-			color: #fff
+			color: $main_txt_color
 		i
 			margin-right: 6px
 			font-size: 14px

@@ -58,6 +58,37 @@ function customScrollbar() {
 }
 
 $(document).ready(function () {
+	// Карта
+
+	function showGoogleMaps() {
+		var position = [50.440459, 30.4076309];
+		var posMark = new google.maps.LatLng(50.440459, 30.4076309);
+
+		var latLng = new google.maps.LatLng(50.440459, 30.4076309);
+
+		var mapOptions = {
+			zoom: 17, // initialize zoom level - the max value is 21
+			streetViewControl: false, // hide the yellow Street View pegman
+			scaleControl: true, // allow users to zoom the Google Map
+			mapTypeId: google.maps.MapTypeId.ROADMAP,
+			center: latLng,
+			scrollwheel: false
+		};
+
+		var map = new google.maps.Map(document.getElementById('map'),
+			mapOptions);
+
+		// Show the default red marker at the location
+		var marker = new google.maps.Marker({
+			position: posMark,
+			map: map,
+			draggable: false,
+			animation: google.maps.Animation.DROP
+		});
+	}
+
+	showGoogleMaps();
+
 
 	svg4everybody({});
 
@@ -68,14 +99,17 @@ $(document).ready(function () {
 	setTimeout(function () {
 		bottomSpacingS = $(document).outerHeight() - ($('.top-section').outerHeight() + $('.top-section').offset().top);
 	}, 500);
-
-	setTimeout(function () {
-		$(".sticky").sticky({
-			topSpacing: 0,
-			//bottomSpacing: bottomSpacingS,
-			widthFromWrapper: false
-		});
-	}, 600);
+	if (window.matchMedia("(min-width: 768px)").matches) {
+		setTimeout(function () {
+			$(".sticky").sticky({
+				topSpacing: 0,
+				//bottomSpacing: bottomSpacingS,
+				widthFromWrapper: false
+			});
+		}, 600);
+	} else {
+		$(".sticky").unstick();
+	}
 
 	// пример анимации через библиотечку animat (но лучше анимировать через GSAP)
 	//$('.our-advantages h2').animated("fadeInUp");
@@ -96,6 +130,9 @@ $(document).ready(function () {
 	const swiper = new Swiper('.top-section', {
 		slidesPerView: 1,
 		effect: 'fade',
+		autoplay: {
+			delay: 18000,
+		},
 		navigation: {
 			nextEl: '.top-section__slider-navigation .swiper-button-next',
 			prevEl: '.top-section__slider-navigation .swiper-button-prev',
@@ -154,12 +191,12 @@ $(document).ready(function () {
 			},
 			// when window width is <= 640px
 			992: {
-				slidesPerView: 3,
+				slidesPerView: 2,
 				spaceBetween: 10
 			},
 			// when window width is <= 1200px
 			1200: {
-				slidesPerView: 3
+				slidesPerView: 2
 			}
 		}
 	});
@@ -225,37 +262,77 @@ $(document).ready(function () {
 	// $( document ).tooltip({
 	//   track: true
 	// });
+	// Инициализация галлереи (надо всегда через id ибо могут быть такие же классы с не будет работать)
+	$('#swiper-wrapper').lightGallery({ selector: '.item' });
 
 	// скролл по ссылке с атрибутом href
-	// $(".header_nav a[href*='#']").on("click", function(e) {
-	//     e.preventDefault();
-	//     var anchor = $(this);
-	//     $('html, body').stop().animate({
-	//         scrollTop: $(anchor.attr('href')).offset().top
-	//     }, 500);
-	//     return false;
-	// });
-
+	$(".header__nav ul li a[href*='#']").on("click", function(e) {
+	    e.preventDefault();
+	    var anchor = $(this);
+	    $('html, body').stop().animate({
+	        scrollTop: $(anchor.attr('href')).offset().top
+	    }, 500);
+	    return false;
+	});
+	$(".header_nav_mobile .menu a[href*='#']").on("click", function(e) {
+		e.preventDefault();
+		var anchor = $(this);
+		$('html, body').stop().animate({
+			scrollTop: $(anchor.attr('href')).offset().top
+		}, 500);
+		return false;
+	});
 	// Скролл по классу .scroll_to и атрибуту data-scroll у кнопки к примеру (data-scroll="куда скроллим" в элементе куда скроллим ставим id потом впишем в куда скроллим)
-	// $(".scroll_to").on("click", function(e) {
-	//     e.preventDefault();
-	//     var anchor = $(this);
-	//     $('html, body').stop().animate({
-	//         scrollTop: $("#" + anchor.data('scroll')).offset().top
-	//     }, 500);
-	//     return false;
-	// });
-});
-
-$(window).resize(function () {
-	$(".sticky").sticky({
-		topSpacing: 0,
-		//bottomSpacing: bottomSpacingS,
-		widthFromWrapper: false
+	$(".scroll_to").on("click", function(e) {
+	    e.preventDefault();
+	    var anchor = $(this);
+	    $('html, body').stop().animate({
+	        scrollTop: $("#" + anchor.data('scroll')).offset().top
+	    }, 500);
+	    return false;
 	});
 });
 
+$(window).resize(function () {
+	if (window.matchMedia("(min-width: 768px)").matches) {
+		setTimeout(function () {
+			$(".sticky").sticky({
+				topSpacing: 0,
+				//bottomSpacing: bottomSpacingS,
+				widthFromWrapper: false
+			});
+		}, 600);
+	} else {
+		$(".sticky").unstick();
+	}
+});
+
 $(window).scroll(function () {
+	if (window.matchMedia("(min-width: 768px)").matches) {
+		setTimeout(function () {
+			$(".sticky").sticky({
+				topSpacing: 0,
+				//bottomSpacing: bottomSpacingS,
+				widthFromWrapper: false
+			});
+		}, 600);
+	}
+	if (window.matchMedia("(max-width: 768px)").matches) {
+		$(".sticky").unstick();
+	}
+	// $(window).on('mousewheel', function(event) {
+	// 	if (event.originalEvent.wheelDelta >= 0) {
+	// 		//console.log('Scroll up');
+	// 		$('.sticky').on('sticky-start', function() {
+	// 			$(".header .row").addClass('sticky-animate');
+	// 		});
+	// 	}
+	// 	else {
+	// 		//console.log('Scroll down');
+	// 		$(".header .row").removeClass('sticky-animate');
+	// 	}
+	// });
+
 
 });
 

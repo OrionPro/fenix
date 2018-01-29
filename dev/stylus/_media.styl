@@ -51,6 +51,52 @@
 		&__slider
 			width: 100%
 			position: static
+	.what-they-say-about-us
+		.swiper-slide__inner
+			width: 890px
+		.swiper-slide__img
+			width: 300px
+			img
+				max-width 100%
+				height: auto
+		.swiper-slide__txt
+			width: 480px
+	.what-they-say-about-us__slider-control
+		left: 50%
+		transform translateX(-50%)
+	.partners
+		.swiper-slide__img
+			margin: auto
+	.rates__item
+		height: 100%
+	.rates__item-img-block
+		position: static
+		display: none
+	.rates__item-img-bg
+		display: none
+	.we-do__inner-wrap
+		align-items flex-start
+	.we-do .swiper-slide__img
+		text-align: center
+	.we-do .swiper-slide__title-slide
+		width: 87%
+		left: 0
+		right: 0
+		margin: auto
+	.top-section__title
+		width: 100%
+		margin-top: 160px
+		p
+			fz(25)
+			line-height: 1.1
+			margin-bottom: 20px
+	.top-section__links-wrap
+		position: static
+		transform none!important
+		a
+			min-width: 200px
+			&:last-of-type
+				min-width: 200px
 // Medium devices (tablets, less than 992px)
 @media only screen and (max-width : 991px)
 	/**/
@@ -64,6 +110,22 @@
 		margin-top: 0
 	nav[canvas]
 		display: block
+	.what-they-say-about-us
+		.swiper-slide__inner
+			width: 650px
+			height: 100%
+			padding-bottom: 20px
+			flex-direction: column
+			justify-content: center
+			align-items: center
+		.swiper-slide__img
+			width: 250px
+			margin-bottom: 15px
+		.swiper-slide__txt
+			width: 280px
+			height: 100%
+	.partners__title
+		margin-bottom: 20px
 // Small devices (landscape phones, less than 768px)
 @media only screen and (max-width : 767px)
 	
@@ -92,23 +154,92 @@
 		h1
 			font-size: 30px
 			margin-top: 40px
-	.header__modal
-		margin-top: 40px
 	[off-canvas*=left]
 		width: 255px
-	.react
-		h2
-			font-size: 20px
 	.file_wrap
 		input
 			width: 80%
 	.white-popup
 		textarea
 			min-height: 80px
+	.what-they-say-about-us
+		.swiper-slide__inner
+			width: 90%
+			height: 100%
+			padding: 20px
+		.swiper-slide__img
+			width: 80%
+			margin: 0 auto 15px
+		.swiper-slide__txt
+			width: 80%
+			height: 100%
+		.swiper-slide__decor-quote-icon
+			width: 50px
+			img
+				max-width 100%
+				height: auto
+	.completed-orders__item-txt
+		width: 50%
+		p
+			max-height: 97px
+	.completed-orders__item-img
+		width: 50%
+		height: 100%
+	.rates__item-price-wrap
+		flex-direction: column
+	.rates__item-description
+		padding: 20px
+	.top-section__links-wrap
+		a
+			margin-bottom: 15px
+	.top-section__title
+		h1
+			width: 100%
+			fz(26)
+		p
+			width: 100%
+			fz(22)
+	.top-section
+		min-height: 750px
+	.header
+		.row
+			width: 540px!important
+			flex-direction: column
+	.header__logo
+		margin: 0 0 10px 0
+		text-align: center
+	.header__social-link-wrap
+		display: none
+	.header__modal
+		margin: 0
+	.header__phone
+		margin-bottom: 10px
+	.rates__item-price
+		text-align: center
 // Extra small devices (portrait phones, less than 576px)
 @media only screen and (max-width : 575px)
 	/**/
-
+	html
+		font-size: 13px
+	.completed-orders__item
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		&.order-flex-img-up
+			flex-direction column-reverse
+	.completed-orders__item-txt
+		width: 270px
+		p
+			min-height 100%
+	.completed-orders__item-img
+		width: 100%
+		text-align: center
+	.completed-orders__item-txt.right-side:after,.completed-orders__item-txt.left-side:after
+		display: none
+	.header
+		.row
+			margin-left: 0
+			width: 100%!important
 // Extra small devices (portrait phones, less than 521px)
 @media only screen and (max-width : 520px)
 	/**/
@@ -118,6 +249,10 @@
 	.white-popup
 		input[type=submit]
 			width: 100%
+	.stages-of-work__item
+		span
+			margin-left: 20px
+			fz(25)
 // Extra small devices (portrait phones, less than 481px)
 @media only screen and (max-width : 480px)
 	/**/
@@ -132,7 +267,21 @@
 		.intermediate_title
 			h3
 				font-size: 20px
-
+	.calculation-of-the-cost-of-photo__form
+		.fileLoad
+			button
+				min-width: 100px
+				width: 100px
+				font-size: 10px
+				i
+					display: none
+	.rates__item-link
+		a
+			min-width: 220px
+	.top-section
+		min-height: 800px
+	.top-section__title
+		padding: 30px
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/

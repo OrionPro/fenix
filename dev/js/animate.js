@@ -7,10 +7,16 @@ class Animation {
 
 	description() {
 		this.tl1.from('.top-section__title', 0.7, {
-			y: -100,
+			x: -100,
 			opacity: 0,
 			ease: Power4.easeOut
-		}, '+=0.3');
+		}, '+=0.3')
+			.from('.top-section__links-wrap', 0.7, {
+				x: -10,
+				opacity: 0,
+				ease: Power4.easeOut
+			}, '+=0')
+		;
 
 	}
 

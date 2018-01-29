@@ -1,0 +1,27 @@
++b.SECTION.footer#footer
+	.container
+		.row
+			.col-xl-4
+				+e.vidget
+					iframe(src="//widget.instagramm.ru/?imageW=3&imageH=1&thumbnail_size=111&type=0&typetext=sdmfeniks&head_show=1&profile_show=1&shadow_show=1&bg=255,255,255,1&opacity=true&head_bg=46729b&subscribe_bg=f8a80f&border_color=c3c3c3&head_title=" allowtransparency="true" frameborder="0" scrolling="no" style="border:none;overflow:hidden;width:100%;height:100%;")
+			.col-xl-4
+				+e.contacts
+					h3 Контакты:
+					+e.contacts-item
+						i.fa.fa-map-marker
+						span г. Киев, бульвар Ивана Лепсе, 16
+					+e.contacts-item
+						i.fa.fa-phone
+						a(href="tel:+380000000000") + 38 (000) 000 - 00 - 00
+					+e.contacts-item
+						i.fa.fa-paper-plane
+						a(href="mailto:info@sdmfeniks.com.ua") info@sdmfeniks.com.ua
+			.col-xl-4
+				+e.map#map
+		.row
+			.col-12
+				+e.copyright
+					p
+						| Дизайн сайта
+						|
+						a(href="http://a-bozhenko.ru" target="_blank") a-bozhenko.ru

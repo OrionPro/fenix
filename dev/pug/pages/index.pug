@@ -10,7 +10,7 @@ block main
 			.swiper-slide
 				.container
 					.row
-						.offset-xl-1
+						.offset-xl-1.col-lg-12
 							+e.title
 								h1
 									| ПРОИЗВОДСТВО КОРПУСНОЙ МЕБЕЛИ НА ЗАКАЗ
@@ -26,7 +26,7 @@ block main
 			.swiper-slide
 				.container
 					.row
-						.offset-xl-1
+						.offset-xl-1.col-lg-12
 							+e.title
 								h1
 									| ПРОИЗВОДСТВО ЧЕГО ТО ТАМ ЕЩЁ
@@ -81,7 +81,7 @@ block main
 							img(src="img/our-advantages__img6.png")
 						p Минимальный срок выполнения заказа
 	// Секция we-do
-	+b.SECTION.we-do
+	+b.SECTION.we-do#we-do
 		.container
 			+e.inner-wrap
 				+e.title.-main-pattern-bg
@@ -92,39 +92,40 @@ block main
 						.button-next.noselect
 							i.fa.fa-angle-right
 				+e.slider
-					.swiper-wrapper
+					.swiper-wrapper#swiper-wrapper
 						.swiper-slide
-							.swiper-slide__img
+							//Большая картинка это путь data-src=
+							.swiper-slide__img(class="item" data-src="img/we-do-slider-img.jpg")
 								a(href="#")
 									img(src="img/we-do-slider-img.jpg")
 									.swiper-slide__title-slide
 										| Ш К А Ф Ы - К У П Е
 						.swiper-slide
-							.swiper-slide__img
+							.swiper-slide__img(class="item" data-src="img/we-do-slider-img2.jpg")
 								a(href="#")
 									img(src="img/we-do-slider-img2.jpg")
 									.swiper-slide__title-slide
 										| К У Х Н И
 						.swiper-slide
-							.swiper-slide__img
+							.swiper-slide__img(class="item" data-src="img/we-do-slider-img3.jpg")
 								a(href="#")
 									img(src="img/we-do-slider-img3.jpg")
 									.swiper-slide__title-slide
 										| С П А Л Ь Н И
 						.swiper-slide
-							.swiper-slide__img
-								a(href="#")
+							.swiper-slide__img(class="item" data-src="img/we-do-slider-img4.jpg")
+								a(href="#" )
 									img(src="img/we-do-slider-img4.jpg")
 									.swiper-slide__title-slide
 										| Д Е Т С К И Е
 						.swiper-slide
-							.swiper-slide__img
+							.swiper-slide__img(class="item" data-src="img/we-do-slider-img4.jpg")
 								a(href="#")
 									img(src="img/we-do-slider-img4.jpg")
 									.swiper-slide__title-slide
 										| В А Н Н Ы Е
 						.swiper-slide
-							.swiper-slide__img
+							.swiper-slide__img(class="item" data-src="img/we-do-slider-img4.jpg")
 								a(href="#")
 									img(src="img/we-do-slider-img4.jpg")
 									.swiper-slide__title-slide
@@ -134,7 +135,7 @@ block main
 		.container
 			+e.item
 				.row
-					.col-lg-8
+					.col-lg-12.col-xl-8
 						+e.item-description
 							h3 Шкаф-купе
 								|
@@ -155,7 +156,7 @@ block main
 					+e.item-img-bg.-main-pattern-bg
 			+e.item
 				.row
-					.col-lg-8
+					.col-lg-12.col-xl-8
 						+e.item-description
 							h3 Шкаф-купе
 								|
@@ -176,7 +177,7 @@ block main
 					+e.item-img-bg.-main-pattern-bg
 			+e.item
 				.row
-					.col-lg-8
+					.col-lg-12.col-xl-8
 						+e.item-description
 							h3 Шкаф-купе
 								|
@@ -291,6 +292,8 @@ block main
 							.input_wrap
 								i.fa.fa-check
 								input(name="phone_mask" type="tel" class="mask" placeholder="+38(___) ___-__-__")
+							input(type='hidden', name='form_name', value='')
+							input(type='hidden', name='form_type', value='normal')
 							button(type="submit" class="main_btn") Отправить
 								i.fa.fa-long-arrow-right
 	// Секция completed-orders
@@ -337,7 +340,7 @@ block main
 			.item-wrap
 				.row
 					.col-xl-6
-						+e.item
+						+e.item.order-flex-img-up
 							+e.item-txt.right-side
 								h3
 									| Шкаф-купе
@@ -355,7 +358,7 @@ block main
 							+e.item-img
 								img(src="img/completed-orders-img.jpg")
 					.col-xl-6
-						+e.item
+						+e.item.order-flex-img-up
 							+e.item-txt.right-side
 								h3
 									| Шкаф-купе
@@ -373,7 +376,7 @@ block main
 			.item-wrap.hide
 				.row
 					.col-xl-6
-						+e.item
+						+e.item.order-flex-img-up
 							+e.item-txt.right-side
 								h3
 									| Шкаф-купе
@@ -391,7 +394,7 @@ block main
 							+e.item-img
 								img(src="img/completed-orders-img.jpg")
 					.col-xl-6
-						+e.item
+						+e.item.order-flex-img-up
 							+e.item-txt.right-side
 								h3
 									| Шкаф-купе
@@ -410,7 +413,7 @@ block main
 				button(type="button" class="main_btn") ПОКАЗАТЬ ЕЩЕ
 					i.fa.fa-long-arrow-right
 	// Секция what-they-say-about-us
-	+b.SECTION.what-they-say-about-us
+	+b.SECTION.what-they-say-about-us#what-they-say-about-us
 		.container
 			.row
 				.col-lg-12
@@ -470,7 +473,7 @@ block main
 	+b.SECTION.calculation-of-the-cost-of-photo
 		.container
 			.row
-				.col-xl-5.flex-center
+				.col-lg-5.flex-center
 					+e.title.-main-pattern-bg
 						h2 РАСЧЕТ СТОИМОСТИ #[br] ПО ФОТО:
 				.col-xl-6.offset-xl-1
@@ -482,11 +485,22 @@ block main
 							.input_wrap
 								input(type='file' value='' multiple='' accept='image/*' name="field")
 								.fileLoad
-									input(type='text' id="file" value='Выберите файл')
+									input(type='text' id="file" placeholder='Выберите файл')
 									button(type='button' class="main_btn") ЗАГРУЗИТЬ ФОТО
 										i.fa.fa-long-arrow-right
 							.input_wrap
 								i.fa.fa-check
 								textarea(name="textarea" placeholder="Напишите ваши замеры и пожелания")
+							input(type='hidden', name='form_name', value='')
+							input(type='hidden', name='form_type', value='normal')
 							button(type="submit" class="main_btn") Отправить
 								i.fa.fa-long-arrow-right
+	// Секция up
+	+b.SECTION.up
+		.container
+			+e.arrow
+				a(href="#" class="scroll_to" data-scroll="header")
+					i.fa.fa-angle-up
+
+block map-script
+	script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKgk8tJ_rz4_AyIYmhUARpZTkK_9GWynk" async="" defer="")
