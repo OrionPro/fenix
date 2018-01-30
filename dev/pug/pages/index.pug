@@ -19,9 +19,9 @@ block main
 									| помещений по Вашим размерам и
 									| пожеланиям
 								+e.links-wrap
-									a(href="#" class="main_btn") СМОТРЕТЬ ФОТО
+									a(href="#" class="main_btn scroll_to" data-scroll="we-do") СМОТРЕТЬ ФОТО
 										i.fa.fa-long-arrow-right
-									a(href="#" class="main_btn") БЕСПЛАТНЫЙ ЗАМЕР
+									a(href="#popup2" class="main_btn open-popup-link" data-info="Бесплатный замер" title='Вызов модального окна') БЕСПЛАТНЫЙ ЗАМЕР
 										i.fa.fa-long-arrow-right
 			.swiper-slide
 				.container
@@ -149,7 +149,7 @@ block main
 									|
 									span 5 000 грн.
 								+e.item-link
-									a(href="#" class="main_btn2") ЗАКАЗАТЬ
+									a(href="#popup2" class="main_btn2 open-popup-link" data-info="Шкаф-купе - СТАНДАРТ" title="Вызов модального окна") ЗАКАЗАТЬ
 										i.fa.fa-long-arrow-right
 					+e.item-img-block
 						img(src="img/rates-img.jpg")
@@ -170,7 +170,7 @@ block main
 									|
 									span 10 000 грн.
 								+e.item-link
-									a(href="#" class="main_btn2") ЗАКАЗАТЬ
+									a(href="#popup2" class="main_btn2 open-popup-link" data-info="Шкаф-купе - ПРЕСТИЖ" title="Вызов модального окна") ЗАКАЗАТЬ
 										i.fa.fa-long-arrow-right
 					+e.item-img-block
 						img(src="img/rates-img2.jpg")
@@ -189,7 +189,7 @@ block main
 								+e.item-price
 									| Цена: от #[span 15 000 грн.]
 								+e.item-link
-									a(href="#" class="main_btn2") ЗАКАЗАТЬ
+									a(href="#popup2" class="main_btn2 open-popup-link" data-info="Шкаф-купе - ЭЛИТ" title="Вызов модального окна") ЗАКАЗАТЬ
 										i.fa.fa-long-arrow-right
 					+e.item-img-block
 						img(src="img/rates-img3.jpg")
@@ -200,7 +200,7 @@ block main
 			+e.title
 				| цена варьируется в зависимости от размеров и материалов изделия
 			+e.item-link
-				a(href="#" class="main_btn") Рассчитать
+				a(href="#popup2" class="main_btn open-popup-link" data-info="Цена варьируется - Рассчитать" title='Вызов модального окна') Рассчитать
 					i.fa.fa-long-arrow-right
 	// Секция partners
 	+b.SECTION.partners
@@ -292,7 +292,7 @@ block main
 							.input_wrap
 								i.fa.fa-check
 								input(name="phone_mask" type="tel" class="mask" placeholder="+38(___) ___-__-__")
-							input(type='hidden', name='form_name', value='')
+							input(type='hidden', name='form_name', value='Оставить заявку на выезд замерщика')
 							input(type='hidden', name='form_type', value='normal')
 							button(type="submit" class="main_btn") Отправить
 								i.fa.fa-long-arrow-right
@@ -491,7 +491,7 @@ block main
 							.input_wrap
 								i.fa.fa-check
 								textarea(name="textarea" placeholder="Напишите ваши замеры и пожелания")
-							input(type='hidden', name='form_name', value='')
+							input(type='hidden', name='form_name', value='Расчёт ')
 							input(type='hidden', name='form_type', value='normal')
 							button(type="submit" class="main_btn") Отправить
 								i.fa.fa-long-arrow-right

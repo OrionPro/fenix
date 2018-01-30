@@ -85,8 +85,8 @@ $(document).ready(function () {
 					required: false, // не валидируется
 				},
 				email: {
-					required: true,
-					customemail: "customemail"
+					required: false,
+					//customemail: "customemail"
 				},
 				phone: {
 					required: true,
@@ -108,9 +108,6 @@ $(document).ready(function () {
 				},
 				textarea: {
 					required: "Заполните поле"
-				},
-				email: {
-					required: "Введите свой email"
 				},
 				phone: {
 					required: "Введите свой телефон"
