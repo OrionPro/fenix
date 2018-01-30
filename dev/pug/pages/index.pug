@@ -187,9 +187,7 @@ block main
 								| полки, штанга для одежды (без ящиков).
 							+e.item-price-wrap
 								+e.item-price
-									| Цена: от
-									|
-									span 15 000 грн.
+									| Цена: от #[span 15 000 грн.]
 								+e.item-link
 									a(href="#" class="main_btn2") ЗАКАЗАТЬ
 										i.fa.fa-long-arrow-right
@@ -477,11 +475,8 @@ block main
 			.row
 				.col-lg-5.flex-center
 					+e.title.-main-pattern-bg
-						h2
-							| РАСЧЕТ СТОИМОСТИ
-							br
-							| ПО ФОТО:
-				.col-lg-6.offset-lg-1
+						h2 РАСЧЕТ СТОИМОСТИ #[br] ПО ФОТО:
+				.col-xl-6.offset-xl-1
 					+e.form
 						form#form-file
 							.input_wrap

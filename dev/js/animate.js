@@ -12,7 +12,7 @@ class Animation {
 			ease: Power4.easeOut
 		}, '+=0.3')
 			.from('.top-section__links-wrap', 0.7, {
-				x: -100,
+				x: -10,
 				opacity: 0,
 				ease: Power4.easeOut
 			}, '+=0')
