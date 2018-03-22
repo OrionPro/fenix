@@ -224,16 +224,20 @@
 	/**/
 	html
 		font-size: 13px
+	.completed-orders
+		.item-wrap
+			.row
+				flex-direction: column
 	.completed-orders__item
 		flex-direction: column
 		align-items: center
 		justify-content: center
 		&.order-flex-img-up
 			flex-direction column-reverse
+			flex-grow: 1
 	.completed-orders__item-txt
 		width: 270px
-		p
-			min-height 100%
+		height: auto
 	.completed-orders__item-img
 		width: 100%
 		text-align: center
