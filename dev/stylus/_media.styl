@@ -172,7 +172,8 @@
 			margin: 0 auto 15px
 		.swiper-slide__txt
 			width: 80%
-			height: 100%
+			min-height: 200px
+			height: auto
 		.swiper-slide__decor-quote-icon
 			width: 50px
 			img
@@ -229,6 +230,7 @@
 			.row
 				flex-direction: column
 	.completed-orders__item
+		min-height: 330px
 		flex-direction: column
 		align-items: center
 		justify-content: center
@@ -238,9 +240,14 @@
 	.completed-orders__item-txt
 		width: 270px
 		height: auto
+		flex-shrink 0
 	.completed-orders__item-img
-		width: 100%
+		width: 270px
+		height: 200px
 		text-align: center
+		img
+			height: inherit
+			flex-shrink 0
 	.completed-orders__item-txt.right-side:after,.completed-orders__item-txt.left-side:after
 		display: none
 	.header
