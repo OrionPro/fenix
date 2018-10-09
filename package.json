@@ -52,6 +52,7 @@
     "randomatic": "^3.1.0",
     "select2": "^4.0.6-rc.1",
     "socket.io": "^2.1.1",
+    "socket.io-client": "^2.1.1",
     "sshpk": "^1.14.2",
     "svg4everybody": "^2.1.8",
     "swiper": "^4.1.0",
